@@ -1,51 +1,78 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.form {
-    margin: 0 auto;
-    width: 600px;
-    height: 100%;
+body {
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.panel {
-    background-color: red;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  width: 100%;
 }
 
-.button {
-    width: 198px;
-    margin-right: -4px;
-    padding: 10px 0px;
-    border: 1px solid black;
-    display: inline-block;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+.btns {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #000;
+  width: 100%;
+  justify-content: center;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+#btn1, #btn2, #btn3 {
+  background-color: red;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.cat {
-    background-color: blue;
-    height: 400px;
-    width: calc(50%);
-    float: left;
+#btn2 {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
 }
 
-.dog {
-    background-color: green;
-    height: 400px;
-    width: calc(50%);
-    float: left;
+.columns {
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+  width: 100%;
 }
 
-img {
-    margin: 15px;
-    height: 300px;
-    width: 270px;
+#col1 {
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  min-width: 5%;
+}
+
+#col2 {
+  background-color: green;
+  height: 100%;
+  width: auto;
+  min-width: 5%;
+}
+
+#col1 img, #col2 img {
+  display: none;
+  max-width: 90%;
+  height: 75%;
+  margin: 20px;
+}
+
+#col1 img {
+  display: block;
+}
+
+#col2 img {
+  display: none;
 }

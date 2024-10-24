@@ -1,38 +1,49 @@
-const left_btn = document.getElementById('left_photo');
+const col1 = document.getElementById('col1');
+const col2 = document.getElementById('col2');
+const imgcat = document.getElementById('cat');
+const imgdog = document.getElementById('dog');
+const buttons = Array.from(document.querySelectorAll('[id^="btn"]'));
 
-left_btn.addEventListener('click', () => {
-    const catsss = document.querySelector('.cat');
-    catsss.style.width = "560px";
-    const dogsss = document.querySelector('.dog');
-    dogsss.style.width = "40px";
-    let image1 = document.querySelector('.img1');
-    image1.style.width = "510px";
-    let image2 = document.querySelector('.img2');
-    image2.style.width = "0px";
-})
+function showcat() {
+  col2.style.width = 'auto';
+  imgdog.style.display = 'none';
+  imgcat.style.display = 'block';
+  col1.style.width = '100%';
+}
 
-const right_btn = document.getElementById('right_photo');
+function showdog() {
+  col2.style.width = '100%';
+  imgdog.style.display = 'block';
+  imgcat.style.display = 'none';
+  col1.style.width = 'auto';
+}
 
-right_btn.addEventListener('click', () => {
-    const catss = document.querySelector('.cat');
-    catss.style.width = "40px";
-    const dogss = document.querySelector('.dog');
-    dogss.style.width = "560px";
-    let image11 = document.querySelector('.img1');
-    image11.style.width = "0px";
-    let image22 = document.querySelector('.img2');
-    image22.style.width = "510px";
-})
+function showcatdog() {
+  col2.style.width = '100%';
+  imgdog.style.display = 'block';
+  imgcat.style.display = 'block';
+  col1.style.width = '100%';
+}
 
-const middle_btn = document.getElementById('both_photo');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const btnNum = button.id.replace('btn', '');
+        buttonsClick(btnNum); // Вызываем соответствующую функцию
+    });
+});
 
-middle_btn.addEventListener('click', () => {
-    const cats = document.querySelector('.cat');
-    cats.style.width = "300px";
-    const dogs = document.querySelector('.dog');
-    dogs.style.width = "300px";
-    let image111 = document.querySelector('.img1');
-    image111.style.width = "270px";
-    let image222 = document.querySelector('.img2');
-    image222.style.width = "270px";
-})
+function buttonsClick(number) {
+    switch (number) {
+        case '1':
+            showcat();
+            break;
+        case '2':
+            showcatdog();
+            break;
+        case '3':
+            showdog();
+            break;
+        default:
+            console.log('error');
+    }
+}

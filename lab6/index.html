@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 6</title>
-    <link rel="stylesheet" type="text/css" href="/home/kokocuk/program/lab6/style.css">
-</head>
-<body>
-    <div class="form">
-        <div class="panel">
-            <div class="button"><a href="#" id="left_photo">Левая колонка</a></div>
-            <div class="button"><a href="#" id="both_photo">Обе</a></div>
-            <div class="button"><a href="#" id="right_photo">Правая колонка</a></div>
+<html lang="zxx" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>lab6</title>
+    <link rel="stylesheet"  type="text/css" href="/home/kokocuk/program/lab6/style.css">
+  </head>
+  <body>
+
+    <main>
+      <div class="btns">
+        <button type="button" id="btn1">Левая колонка</button>
+        <button type="button" id="btn2">Обе две</button>
+        <button type="button" id="btn3">Правая колонка</button>
+      </div>
+      <div class="columns">
+        <div class="col" id="col1">
+          <img src="/home/kokocuk/program/lab6/cat.jpg" alt="cat" id="cat">
         </div>
-        <div class="cat">
-            <img src="cat.jpg" alt="cat photo" class="img1">
+        <div class="col" id="col2">
+          <img src="/home/kokocuk/program/lab6/dog.jpg" alt="dog" id="dog">
         </div>
-        <div class="dog">
-            <img src="dog.jpg" alt="dog photo" class="img2">
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+      </div>
+    </main>
+
+    <script src="/home/kokocuk/program/lab6/script.js"></script>
+  </body>
 </html>
